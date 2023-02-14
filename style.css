@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body{
+  font-family: 'cardo';
+}
+
+a{
+  text-decoration: none !important;
+  color: #2c2c2c !important;
+}
+
+p{
+  color: black;
+}
+
+ul{
+  list-style: none;
+}
+
+/* --------------------------------------------------------------- */
+/* pagina: index.php */
+
+/* navbar que aparece no index.php: */
+.nav-inicial ul{
+  margin: 10px 30px 0 0;
+  display: flex;
+  font-size: 20px;
+  justify-content: right;
+}
+
+.nav-inicial li{
+  padding: 15px;
+}
+
+/* parte estrutural da página */
+.container-inicio{
+  width: 90%;
+  text-align: center;
+  margin: 15vh auto;
+}
+
+.container-inicio img{
+  width: 450px;
+}
+
+.container-inicio p, .container-cadastro p{
+  margin: 20px 0 30px 0;
+  font-size: 30px;
+  color: #668610;
+}
+
+.container-inicio a{
+  color: black;
+  font-size: 25px;
+  position: relative;
+}
+
+.container-inicio a::after{
+  content: "";
+  position: absolute;
+  background-color: #668610;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+}
+
+.bi-arrow-right{
+  font-size: 15px;
+}
+
+/* --------------------------------------------------- */
+/* tela de cadastro: */
+
+/* a estrutura da navbar foi reciclada da navbar do index.php, com apenas essa modificação: */
+.nav-bar-cadastro{
+  margin: 10px 0 0 10px;
+}
+
+/* estrutura da página */
+.container-cadastro{
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.container-cadastro img{
+  width: 350px;
+}
+
+/* estrutura dos botões que aparecem na tela */
+.container-cadastro input{
+  margin: 5px auto;
+  font-size: 18px;
+  font-family: 'cardo';
+  border: 1px solid #E8E8E8;
+  width: 400px;
+  padding: 15px;
+  height: 35px;
+  border-radius: 30px;
+}
+
+/* o select tem um tamanho diferente por isso teve algumas auterações dos demais botões */
+select{
+  margin: 5px auto;
+  font-family: 'cardo';
+  border: 1px solid #E8E8E8;
+  width: 430px;
+  padding: 20px 15px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+select{
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance:none;
+}
+
+/* fazer com que quando os botões sejam selecionados sua borda não mude*/
+.container-cadastro input:focus{
+  outline: none;
+}
+
+/* botão de login: */
+.login{
+  margin: 5px auto;
+  border: 1px solid #DDE5B6;
+  background-color: #DDE5B6;
+  width: 400px;
+  line-height: 35px;
+  font-size: 18px;
+  padding: 15px;
+  height: 35px;
+  border-radius: 30px;
+}
+
+/* botão de salvar na que aparece na página de cadastrar livro */
+.salvar{
+  height: 65px !important;
+}
+
+/* alterações no botão de cadastrar porque ele tem dimenções diferentes dos demais */
+.container-cadastro input[type=submit]{
+  width: 435px;
+  color: #2c2c2c;
+  font-size: 18px;
+  background-color: #E8E8E8;
+  border: 1px solid #E8E8E8;
+  padding: 10px;
+  height: 70px;
+  border-radius: 30px;
+}
+
+.container-cadastro input[type=submit]:hover{
+  cursor: pointer;
+}
+
+/* o display do type file fica nulo para aparecer apenas o botão 
+para o usuário selecionar uma imagem na aba de cadastrar livros */
+input[type="file"] {
+  display: none;
+}
+
+/* botão que aparecerá para o usuário selecionar uma imagem na aba de cadastrar livros: */
+.label-legal{
+  padding: 20px 10px;
+  width: 410px;
+  font-size: 18px;
+  background-color: #DDE5B6;
+  color: #2c2c2c;
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+
+
+.body-login .container-cadastro{
+  margin-top: 15px;
+}
+
+/* ----------------------------------------------------------- */
+/* pagina: main.php */
+
+
+/* navbar nova para a pagina inicial: */
+.nav-main{
+  align-items: center;
+  margin: 5px 25px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-main ul{
+  display: flex;
+}
+
+.nav-main li{
+  margin: 0 25px 0 0;
+}
+
+.nav-main a{
+  font-size: 18px;
+  padding: 10px;
+  position: relative;
+}
+
+.nav-main ul a::after{
+    content: "";
+    position: absolute;
+    background-color: #668610;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: 0px;
+    transition: all .3s;
+}
+
+.nav-main ul a:hover::after{
+  width: 100%;
+}
+
+/* configurações para barra de pesquisas*/
+.searchbar{
+  width: 40%;
+  margin: auto;
+  margin-bottom: 100px;
+  height: 50px;
+  display: flex;
+}
+
+textarea ,textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+
+.searchbar input{
+  width:100%;
+  height: 100%;
+  border-radius: 100px 0 0 100px;
+  border-top: 2px solid #a3a3a3;
+  border-right:0 ;
+  border-left: 2px solid #a3a3a3;
+  border-bottom: 2px solid #a3a3a3;
+}
+
+/* botão da searchbar */
+.botao-pesquisar .material-symbols-outlined{
+  float: right;
+  padding-right: 150px;
+  position: relative;
+  top: 0;
+  background-color: white;
+  border-radius:  0px 100px 100px 0;
+  padding: 11px;
+  border-top: 2px solid #a3a3a3;
+  border-right: 2px solid #a3a3a3;
+  border-left: 0;
+  border-bottom: 2px solid #a3a3a3;
+
+}
+
+.nav-main .material-symbols-outlined{
+  font-size: 35px;
+  color: #2c2c2c;
+}
+
+.material-symbols-outlined:hover{
+  cursor: pointer;
+}
+
+
+.searchbar input::placeholder{
+  font-size: 20px;
+}
+
+.search{
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+/* aqui estou sumindo com o botão de pesquisa pra ficar apenas o icone da lupa */
+#btnsearch{
+  display: none;
+}
+
+
+.titulo-principal{
+  margin: 80px 0 20px 0;
+  text-align: center;
+  color: #668610;
+  font-size: 4em;
+}
+
+/* esses dois são referente a navbar que aparece na versão para celular, por isso display none aqui */
+.nav-main input{
+  display: none;
+}
+
+.nav-main label{
+  display: none;
+}
+
+/* ---------------------------- */
+/* pagina livro lista */
+
+
+/* colocando tamanho fixo nas imagens para não estourarem a box do livro */
+.livro_inicio img{
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* box do livro */
+.livro_inicio{
+  border-radius: 1px;
+  width: 180px;
+  height: 250px;
+  padding: 20px;
+  border: 4px solid #c8c8c8;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.livro-img{
+  width: 80%;
+  margin: auto;
+}
+
+.livro_inicio h3{
+  margin-top: 30px;
+}
+
+.livro_inicio p{
+  position: relative;
+}
+
+/* configurando a grade dos livros */
+.fundo_lista_livros{
+  justify-items: center;
+  margin: auto;
+  width: 65%;
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr ;
+}
+
+/* objeto que aparece quando passa o mouse em cima de "mais informações": */
+.livro_inicio p::after{
+  content: "";
+  position: absolute;
+  background-color: #668610;
+  height: 2px;
+  width: 0%;
+  left: 10%;
+  bottom: 0px;
+  transition: all .3s;
+}
+
+.livro_inicio p:hover::after{
+  width: 80%;
+}
+
+/* número das páginas: */
+.numeros{
+  text-align: center;
+}
+
+.numeros a{
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+/* número da página atual */
+.pagina-atual{
+  color: red;
+  position: relative;
+}
+
+.pagina-atual::after{
+  content: "";
+  position: absolute;
+  background-color: #668610;
+  height: 2.5px;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+}
+
+/*página referente ao trabalho sobre as bibliotecas de garopaba e imbituba*/
+
+.biblioteca h1{
+  text-align: center;
+  color: #668610;
+}
+
+.biblio{
+  width: 850px;
+  margin: 30px auto;
+  background-color: rgb(255, 255, 255);
+  border: #c8c8c8 solid 2px;
+}
+
+.biblio h3{
+  padding: 25px 0px 0px 25px;
+}
+
+
+.biblio p{
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  padding: 25px;
+}
+
+.img-biblio{
+  width: 800px;
+  margin: auto;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* --------------------------------------- */
+/* tela do perfil de usuário: */
+
+.informacoes-usuario{
+  font-family: 'roboto';
+  border: 3px solid #a3a3a3;
+  width: 80%;
+  margin: auto;
+  padding: 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.fundo-perfil h1{
+  text-align: center;
+}
+
+.informacoes-usuario{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.profile{
+  display: flex;
+}
+
+.img-perfil p{
+  text-align: center;
+}
+
+/* informações do usuário: */
+.info-perfil{
+  margin-left: 30px;
+}
+
+.info-perfil h2{
+  font-weight: bolder;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.info-perfil h3{
+  font-size: 23px;
+  margin-bottom: 60px;
+}
+
+/* parte das trocas: */
+.trocas-finalizadas{
+  margin-top: 230px;
+  width: 170px;
+}
+
+.trocas-pendentes{
+  font-family: 'roboto';
+  border: 3px solid #a3a3a3;
+  width: 80%;
+  margin: auto;
+  padding: 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.troca-pendente{
+  padding: 15px 0;
+  margin: 15px 0;
+  border-bottom: 3px solid #a3a3a3;
+}
+
+.troca-pendente h1{
+  margin-bottom:25px ;
+}
+
+.trocas-pendentes h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.trocas-andamento{
+  font-family: 'roboto';
+  border: 3px solid #a3a3a3;
+  width: 80%;
+  margin: auto;
+  padding: 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.trocas-andamento h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.troca{
+  margin-top: 25px;
+}
+
+.troca a{
+  margin-left: 10px;
+  font-family: 'cardo';
+  background-color: #DDE5B6;
+  width: 180px;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+/* ----------------------- */
+/* pagina do livro: */
+
+/* box da tela, ja fazendo a divisão da imagem do livro com as informações */
+.pagina-escura{
+  font-family: 'Josefin Sans';
+  border: 3px solid #a3a3a3;
+  width: 80%;
+  margin: 50px auto;
+  padding: 25px;
+  font-size: 22px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* config da imagem: */
+.imagem-mostrada{
+  width: 40%;
+  text-align: center;
+}
+
+.imagem-mostrada{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-mostrada img{
+  width: 100%;
+
+}
+
+/* config das informações do livro */
+.livro-informacoes{
+  width: 40%;
+}
+
+.livro-informacoes h1{
+  margin-bottom: 100px;
+}
+
+.livro-informacoes p{
+  margin-bottom: 25px;
+}
+
+.perfil-dono-livro{
+  position: relative;
+}
+
+/* sinalização que o nome do dono do livro é um link: */
+.perfil-dono-livro::after{
+  content: "";
+  position: absolute;
+  background-color: #668610;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+}
+
+/* botão de troca */
+.querotrocar{
+  margin-top: 100px;
+  font-family: 'cardo';
+  background-color: #DDE5B6;
+  width: 180px;
+  line-height: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.querotrocar a{
+  padding: 10px;
+}
+
+.nome-verde{
+  color: #668610;
+  font-weight: bold
+}
+
+
+/* ---------------------- */
+/* perfil de outros usuários */
+
+
+.informacoes{
+  font-family: 'roboto';
+  border: 3px solid #a3a3a3;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.fundo h1{
+  margin-top: 100px;
+  margin-left: 10%;
+}
+
+.informacoes h2{
+  margin-bottom: 30px;
+}
+
+.informacoes h3{
+  margin-bottom: 80px;
+}
+
+/* imagem de perfil */
+.imghehe{
+  margin-right: 20px ;
+}
+
+/* linha que fica em baixo de algumas coisas para sinalizar que é um link na parte de trocas pendentes
+do usuário no seu perfil*/
+.link{
+  position: relative;
+}
+
+.link::after{
+  content: "";
+  position: absolute;
+  background-color: #668610;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -3px;
+}
+
+/* media query para adptar o site para celular: */
+@media screen and (max-width: 1400px){
+  /* diminuindo a quantidade de colunas na grade de livros na pagina inicial */
+  .fundo_lista_livros{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .searchbar{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1100px){
+  /* diminuindo a quantidade de colunas na grade de livros na pagina inicial de novo */
+  .fundo_lista_livros{
+    grid-template-columns: 1fr 1fr;
+    }
+  .searchbar{
+      width: 60%;
+    }
+}
+
+/* principal media query: */
+@media screen and (max-width: 800px){
+
+/* tamanho da searchbar em porcentagem para se adaptar mais fácil */
+  .searchbar{
+    width: 80%;
+  }
+
+/* grade com uma coluna */
+  .fundo_lista_livros{
+    grid-template-columns: auto;
+  }
+
+
+  .livro_inicio{
+    margin: 7px auto;
+  }
+
+/* mudando a nav bar para celular */
+  .nav-inicial ul{
+    justify-content: space-between;
+  }
+
+  .nav-main{
+    display: block;
+  }
+
+/* tirando os itens da navbar para eles aparacerem apenas quando clicarem no icone de menu */
+  .nav-main ul{
+    display: none;
+    position: absolute;
+    left: 100%;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    transition: .3s;
+    z-index: 10;
+  }
+
+  .nav-main ul li{
+    margin: 50px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cecece;
+  }
+
+
+/* mostrando o icone de menu para mostrar itens da navbar */
+  .nav-main label{
+    display: inline;
+    float: right;
+    padding: 10px;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+    display: block;
+    transition: .3s;
+  }
+
+/* aba referente a um trabalho sobre as bibliotecas de garopaba e imbituba */
+
+  .biblio{
+    width: 360px;
+    margin: 30px auto;
+    background-color: rgb(255, 255, 255);
+    border: #c8c8c8 solid 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-biblio{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+
+  .img-biblio img{
+    padding-top: 25px;
+    max-width: 100%;
+  }
+
+  .biblioteca h1{
+    width: 90%;
+    margin: auto;
+  }
+
+/* mudando o tamanho dos botões da tela de cadastro, login, cadastro de livros e troca
+para uso no celular: */
+/* ------------------ */
+
+  .container-cadastro input{
+    width: 90%;
+  }
+
+  select{
+    width: 95%;
+  }
+
+  .label-legal{
+    width: 90%;
+  }
+
+  .salvar{
+    width: 95% !important;
+  }
+
+  .container-inicio img{
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-inicial ul{
+    margin: 10px 30px 0 30px;
+  }
+
+  .container-cadastro input[type=submit]{
+    width: 100%;
+  }
+
+  .login{
+    width: 90%;
+  }
+
+/* ---------------------- */
+
+/* página do livro */
+
+  /* box do livro */
+  .pagina-escura{
+    display: block;
+    width: 80%;
+  }
+
+  .imagem-mostrada{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .livro-informacoes{
+    width: 80%;
+    margin: auto;
+  }
+
+  .livro-informacoes h1{
+    text-align: center;
+  }
+
+  .querotrocar{
+    margin: auto;
+  }
+  
+  .livro-informacoes h1{
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+/* página do perfil de usuário: */
+
+  .informacoes-usuario img{
+    width: 100%;
+  }
+
+  .informacoes-usuario{
+    display: block;
+    width: 90%;
+    padding: 5px !important;
+  }
+
+  .profile{
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  .img-perfil{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .fundo-perfil{
+    width: 90%;
+    margin: auto;
+  }
+
+  .info-perfil{
+    margin-left: 0px;
+  }
+
+  .informacoes{
+    display: block;
+  }
+
+  .imghehe{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    
+  }
+
+/* parte de trocas pendentes ou em andamento */
+
+  .trocas-finalizadas{
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .troca{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .troca a{
+    margin: auto;
+    margin-bottom:5px ;
+  }
+
+}
